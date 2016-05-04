@@ -1,0 +1,21 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/app.css">
+    </head>
+    <body ng-app="ConwaysApp" ng-controller="ConwaysCtrl">
+        <button ng-click="update()">Update</button>
+        <button ng-click="toggleTime()">{{getLabel()}}</button>
+        <button ng-click="nextTick()">Next Tick</button>
+        <p>{{score_x_debug}} - {{score_y_debug}}</p>
+        <table>
+            <tr ng-repeat="row in grid track by $index">
+                <td ng-repeat="item in row track by $index" ng-click="toggleCell($parent.$index, $index)" ng-class="getClass(item)"></td>
+            </tr>            
+        </table>
+    </body>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/controllers/ConwaysCtrl.js"></script>
+</html>
