@@ -29,7 +29,6 @@ app.controller('ConwaysCtrl', ['$scope', '$interval', function ($scope, $interva
                grid[i][j] = 0;
             }
         }
-        grid = $scope.blincker(grid);
         
         return (grid);
     };
